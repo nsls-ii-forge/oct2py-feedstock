@@ -26,9 +26,14 @@ requirements:
     - octave_kernel >=0.31.0
     - scipy
 
-test:
-  imports:
-    - oct2py
+# The tests require the 'octave-cli' binary, that failed to install via
+# yum_requirements.txt, that requires the epel-release repo (see
+# https://wiki.octave.org/Octave_for_GNU/Linux for the installation
+# instructions), so commenting it out in favor of the 'fake' test provided via
+# run_test.py, the same way as it's done in the conda-forge counterpart.
+# test:
+#   imports:
+#     - oct2py
 
 about:
   home: http://github.com/blink1073/oct2py
